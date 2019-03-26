@@ -21,7 +21,7 @@ $result = $conn->query($sql);
 $result2 = $conn->query($sql2);
 $result3 = $conn->query($sql3);
 
-if ($result and $result2 && $result3 == true){
+if ($result || $result2 || $result3 == true){
 		header('Location:../admin/transaksi.php');
 	}
 	else {

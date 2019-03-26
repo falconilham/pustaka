@@ -12,6 +12,7 @@ $dbname = "perpustakaan";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $sql = "SELECT * from buku where id_buku = '$id'";
+$datenow = date("d/m/Y");
 
 $result = mysqli_query($conn, $sql);
 while($row = $result->fetch_assoc()) {      
@@ -60,13 +61,15 @@ while($row = $result->fetch_assoc()) {
 						
 						<div class="form-group">
 							<label>Tanggal Kembali</label>
-							<input type="date" class="form-control" name="waktu" required/>
+							<input type="date" class="form-control" id="waktu" name="waktu" min="<?php $datenow ?>" required/>
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Pinjam</button>
+						<button type="submit" onclick="tai()" class="btn btn-primary">Pinjam</button>
 					</form>
 					</div>
-
+			</div>
+		</div>
+	</body>
 <?php } 
 	}	?>		
 </html>

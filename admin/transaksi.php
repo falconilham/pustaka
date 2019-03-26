@@ -55,8 +55,7 @@
 							<td><?php echo $row['author']; ?></td>
 							<td><?php echo $row['tnggal_pinjam']; ?></td>
 							<td><?php echo $row['tnggal_kembali']; ?></td>
-							<td><a href="../proses/delete_transaksi.php?id_transaksi=<?php echo $row['id_transaksi']; ?>" class="btn btn-danger" role="button">Hapus</a>
-							<a href="../proses/transaksi_selesai.php?id_buku=<?php echo $row['id_buku']; ?>" class="btn btn-Primary" role="button">Proses Selesai</a></td>
+							<td><a href="../proses/transaksi_selesai.php?id_buku=<?php echo $row['id_buku']; ?>" class="btn btn-Primary" role="button">Proses Selesai</a></td>
 						</tr>
 						<?php } ?>
 					</table>
